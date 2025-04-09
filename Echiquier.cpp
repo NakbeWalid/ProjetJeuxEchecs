@@ -1,4 +1,8 @@
 #include "Echiquier.hpp"
+#include <vector>
+using std::vector;
+
+
 
 Echiquier::Echiquier(QWidget* parent) {
     setupEchiquier();
@@ -9,7 +13,7 @@ void Echiquier::setupEchiquier() {
     QGridLayout* layout = new QGridLayout;
 
     for (int lig = 0; lig < 8; lig++) {
-        QList<QPushButton*> ligne;
+        vector <QPushButton*> ligne;
 
         for (int col = 0; col < 8; ++col) {
             QPushButton* bouton = new QPushButton(this);
@@ -24,9 +28,9 @@ void Echiquier::setupEchiquier() {
             bouton->setFixedSize(50, 50);
             layout->addWidget(bouton, lig, col);
 
-            ligne.append(bouton);
+            ligne.push_back(bouton);
         }
-        matriceBoutons.append(ligne);
+        matriceBoutons.push_back(ligne);
     }
 
     layout->setContentsMargins(0, 0, 0, 0);
