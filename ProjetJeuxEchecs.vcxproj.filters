@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -24,6 +20,10 @@
     <Filter Include="Sources Bibliotheques">
       <UniqueIdentifier>{a04a33a4-c035-4a41-b232-b48094179040}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="ProjetJeuxEchecs.qrc">
@@ -32,12 +32,6 @@
     <QtUic Include="ProjetJeuxEchecs.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="ProjetJeuxEchecs.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <ClCompile Include="ProjetJeuxEchecs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -58,27 +52,81 @@
     <ClCompile Include="Piece.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Roi.cpp">
+    <ClCompile Include="King.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Echiquier.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="case.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjetJeuxEchecs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Position.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="raii.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="knight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Piece.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Resource Files\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Roi.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="King.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="color.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypePiece.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Position.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kingException.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Echiquier.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="raii.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="knight.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tower.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjetJeuxEchecs.h">
+      <Filter>Resource Files\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="Echiquier.hpp">
-      <Filter>Header Files</Filter>
+    <QtMoc Include="Board.hpp">
+      <Filter>Resource Files\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="case.hpp">
+      <Filter>Resource Files\Header Files</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

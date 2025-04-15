@@ -1,30 +1,36 @@
 #pragma once
-#include <vector>
+#include "color.hpp"
+#include "typepiece.hpp"
+#include "position.hpp"
+#include <unordered_set>
 #include <string>
-#include <utility> // pour std::pair
+#include <QString>
+#include <algorithm>
 
-using std::vector;
-using std::string;
-using std::pair;
+namespace ui {
+    class Board;
+}
 
-class Piece {
-public:
-    enum class Couleur { Blanc, Noir };
+namespace chess {
 
-    Piece(Couleur couleur, int x, int y);
-    virtual ~Piece() = default;
+    class Piece {
+    public:
 
-    Couleur getCouleur() const;
-    pair<int, int> getPosition() const;
-    void setPosition(int x, int y);
-    virtual char getSymbole() const = 0;
 
-    virtual vector<pair<int, int>> deplacementsPossibles() const = 0;
+        Piece(TypePiece type, Color couleur, std::string black, std::string white);
+        Piece() = default;
+        virtual ~Piece() = default;
 
-    bool mouvementValide(int x, int y) const;
+        virtual const TypePiece& getTypePiece() const;
+        virtual const Color& getColor() const;
+        virtual  const QString& getImage() const;
+        virtual std::unordered_set <Position, PositionHash> getMovementsList(const Position& depart, ui::Board& echiquier) const = 0;
 
-protected:
-    Couleur couleur;
-    int x;
-    int y;
-};
+    private:
+        TypePiece type_;
+        Color color_;
+        QString image_;
+    };
+}
+
+

@@ -101,23 +101,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="case.cpp" />
     <ClCompile Include="Echiquier.cpp" />
+    <ClCompile Include="knight.cpp" />
     <ClCompile Include="Piece.cpp" />
-    <ClCompile Include="Roi.cpp" />
+    <ClCompile Include="King.cpp" />
+    <ClCompile Include="Position.cpp" />
+    <ClCompile Include="ProjetJeuxEchecs.cpp" />
+    <ClCompile Include="raii.cpp" />
+    <ClCompile Include="test.cpp" />
     <ClCompile Include="TestJeuxEchecs.cpp" />
+    <ClCompile Include="tower.cpp" />
     <QtRcc Include="ProjetJeuxEchecs.qrc" />
     <QtUic Include="ProjetJeuxEchecs.ui" />
-    <QtMoc Include="ProjetJeuxEchecs.h" />
+    <ClInclude Include="ProjetJeuxEchecs.h" />
     <ClCompile Include="bibliotheque_cours\bibliotheque_cours.cpp" />
     <ClCompile Include="bibliotheque_cours\verification_allocation.cpp" />
     <ClCompile Include="googletest\src\gtest-all.cc" />
-    <ClCompile Include="ProjetJeuxEchecs.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="Echiquier.hpp" />
+    <QtMoc Include="Board.hpp" />
+    <QtMoc Include="case.hpp" />
+    <ClInclude Include="kingException.hpp" />
+    <ClInclude Include="knight.hpp" />
+    <ClInclude Include="Position.hpp" />
+    <ClInclude Include="raii.hpp" />
+    <ClInclude Include="tower.hpp" />
+    <ClInclude Include="TypePiece.hpp" />
+    <ClInclude Include="Echiquier.hpp" />
+    <ClInclude Include="color.hpp" />
     <ClInclude Include="Piece.hpp" />
-    <ClInclude Include="Roi.hpp" />
+    <ClInclude Include="King.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -14,6 +14,14 @@
 
 #include "ProjetJeuxEchecs.h"
 #include <QtWidgets/QApplication>
+#include <QApplication>
+#include <QMessageBox>
+#include "king.hpp"
+#include "kingException.hpp"
+#include "board.hpp"
+#include <iostream>
+#include <QSize>
+
 
 #if __has_include("bibliotheque_cours.hpp")
 #include "bibliotheque_cours.hpp"
@@ -46,7 +54,8 @@ int main(int argc, char *argv[])
     bibliotheque_cours::VerifierFuitesAllocations verifierFuitesAllocations;
     QApplication app(argc, argv);
     initialiserBibliothequeCours(argc, argv);
-    ProjetJeuxEchecs w;
-    w.show();
+    ui::Board echiquier;
+
+    echiquier.show();
     return app.exec();
 }
