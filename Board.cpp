@@ -1,4 +1,6 @@
 #include "board.hpp"
+#include "tower.hpp"
+#include "knight.hpp"
 
 #include "QLabel"
 #include <QRadioButton>
@@ -309,29 +311,55 @@ namespace ui {
         ready_ = true;
         if (modifier == 0) {
             plateau_[0][4]->setPiece(make_unique<King>(King(Color::Black)), true);
+            plateau_[1][5]->setPiece(make_unique<Knight>(Knight(Color::Black)), true);
+            plateau_[1][2]->setPiece(make_unique<Knight>(Knight(Color::Black)), true);
+            plateau_[0][0]->setPiece(make_unique<Tower>(Tower(Color::Black)), true);
+            plateau_[0][7]->setPiece(make_unique<Tower>(Tower(Color::Black)), true);
 
             plateau_[7][4]->setPiece(make_unique<King>(King(Color::White)), true);
+            plateau_[6][5]->setPiece(make_unique<Knight>(Knight(Color::White)), true);
+            plateau_[6][2]->setPiece(make_unique<Knight>(Knight(Color::White)), true);
+            plateau_[7][0]->setPiece(make_unique<Tower>(Tower(Color::White)), true);
+            plateau_[7][7]->setPiece(make_unique<Tower>(Tower(Color::White)), true);
         }
         else if (modifier == 1) {
             plateau_[0][1]->setPiece(make_unique<King>(King(Color::Black)), true);
- 
+            plateau_[2][3]->setPiece(make_unique<Knight>(Knight(Color::Black)), true);
+            plateau_[1][2]->setPiece(make_unique<Knight>(Knight(Color::Black)), true);
+            plateau_[5][0]->setPiece(make_unique<Tower>(Tower(Color::Black)), true);
+            plateau_[0][7]->setPiece(make_unique<Tower>(Tower(Color::Black)), true);
 
             plateau_[5][0]->setPiece(make_unique<King>(King(Color::White)), true);
-   
+            plateau_[7][3]->setPiece(make_unique<Knight>(Knight(Color::White)), true);
+            plateau_[6][2]->setPiece(make_unique<Knight>(Knight(Color::White)), true);
+            plateau_[4][4]->setPiece(make_unique<Tower>(Tower(Color::White)), true);
+            plateau_[7][4]->setPiece(make_unique<Tower>(Tower(Color::White)), true);
         }
         else if (modifier == 2) {
             plateau_[0][5]->setPiece(make_unique<King>(King(Color::Black)), true);
-
+            plateau_[3][5]->setPiece(make_unique<Knight>(Knight(Color::White)), true);
+            plateau_[3][2]->setPiece(make_unique<Knight>(Knight(Color::White)), true);
+            plateau_[1][0]->setPiece(make_unique<Tower>(Tower(Color::Black)), true);
+            plateau_[1][7]->setPiece(make_unique<Tower>(Tower(Color::Black)), true);
 
             plateau_[7][5]->setPiece(make_unique<King>(King(Color::White)), true);
-
+            plateau_[4][5]->setPiece(make_unique<Knight>(Knight(Color::Black)), true);
+            plateau_[4][2]->setPiece(make_unique<Knight>(Knight(Color::Black)), true);
+            plateau_[7][1]->setPiece(make_unique<Tower>(Tower(Color::White)), true);
+            plateau_[6][6]->setPiece(make_unique<Tower>(Tower(Color::White)), true);
         }
         else if (modifier == 3) {
             plateau_[0][5]->setPiece(make_unique<King>(King(Color::Black)), true);
-        
+            plateau_[3][5]->setPiece(make_unique<Knight>(Knight(Color::Black)), true);
+            plateau_[3][2]->setPiece(make_unique<Knight>(Knight(Color::Black)), true);
+            plateau_[2][0]->setPiece(make_unique<Tower>(Tower(Color::Black)), true);
+            plateau_[2][7]->setPiece(make_unique<Tower>(Tower(Color::Black)), true);
 
             plateau_[7][4]->setPiece(make_unique<King>(King(Color::White)), true);
-         
+            plateau_[4][5]->setPiece(make_unique<Knight>(Knight(Color::White)), true);
+            plateau_[4][2]->setPiece(make_unique<Knight>(Knight(Color::White)), true);
+            plateau_[6][4]->setPiece(make_unique<Tower>(Tower(Color::White)), true);
+            plateau_[6][7]->setPiece(make_unique<Tower>(Tower(Color::White)), true);
         }
     }
 

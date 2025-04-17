@@ -6,7 +6,7 @@
 
 namespace chess {
     Knight::Knight(Color couleur) : Piece(TypePiece::Knight,
-        couleur, "..\\assets\\nd.png", "..\\assets\\nl.png") {
+        couleur, "nd.png", "nl.png") {
     }
 
 

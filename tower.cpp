@@ -3,7 +3,7 @@
 namespace chess {
 
     Tower::Tower(Color couleur) : Piece(TypePiece::Tower, couleur,
-        "..\\assets\\rd.png", "..\\assets\\rl.png") {
+        "rd.png", "rl.png") {
     }
 
 

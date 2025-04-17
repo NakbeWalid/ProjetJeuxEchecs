@@ -105,6 +105,7 @@
     <ClCompile Include="case.cpp" />
     <ClCompile Include="Echiquier.cpp" />
     <ClCompile Include="knight.cpp" />
+    <ClCompile Include="LogicalBoard.cpp" />
     <ClCompile Include="Piece.cpp" />
     <ClCompile Include="King.cpp" />
     <ClCompile Include="Position.cpp" />
@@ -115,6 +116,7 @@
     <ClCompile Include="tower.cpp" />
     <QtRcc Include="ProjetJeuxEchecs.qrc" />
     <QtUic Include="ProjetJeuxEchecs.ui" />
+    <ClInclude Include="LogicalBoard.hpp" />
     <ClInclude Include="ProjetJeuxEchecs.h" />
     <ClCompile Include="bibliotheque_cours\bibliotheque_cours.cpp" />
     <ClCompile Include="bibliotheque_cours\verification_allocation.cpp" />
